@@ -23,4 +23,6 @@ print("El numero: ", dato," es de tipo ", type(dato))
 print(float("231.33") + 3.1)
 print(str(dato) + "222")
 
+
+ #ERROR DE MALA IDENTACION
  print("no puedo poner un espacio donde me salga de los huevos")
