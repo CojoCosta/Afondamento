@@ -202,3 +202,162 @@ index d9126ab..ac21508 100644
 ```
 
 **Ignorar archivos (.gitignore)**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git ls-tree --name-only -r HEAD
+.gitignore
+Hola.java
+script.sh
+text.txt
+```
+
+**Tags y gestión de versiones (git tag y git checkout)**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git tag v0.7
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+4943c69 (HEAD -> main, tag: v0.7, origin/main, origin/HEAD) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+**Ramas**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch Prueba
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+4943c69 (HEAD -> main, tag: v0.7, origin/main, origin/HEAD, Prueba) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch
+  Prueba
+* main
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git switch Pureba
+M       GIT/PracticaGuiada.md
+Switched to branch 'Prueba'
+PS C:\Users\Diego Costa\Desktop\Afondamento> 
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch
+* Pureba
+  main
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+d8a1687 (HEAD -> Prueba) changes
+4943c69 (tag: v0.7, origin/main, origin/HEAD, main) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -a -m "Rama para prebas de codigo"
+[Pureba d3181e1] Rama para prebas de codigo
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+d3181e1 (HEAD -> Prueba) Rama para prebas de codigo
+d8a1687 changes
+4943c69 (tag: v0.7, origin/main, origin/HEAD, main) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+Prueba a cambiar el Hola.java de añadiéndole la línea:
+```
+System.out.println("I have no more branches to commit, said the Ent");
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -a -m "Llegan los Ents a Java"
+[Pureba d120297] Llegan los Ents a Java
+ 2 files changed, 36 insertions(+), 4 deletions(-)
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git tag v0.7-Ent-Release
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log
+commit d12029769bf6c77993dfad3d2d1c58eaa1a34fe2 (HEAD -> Pureba, tag: v0.7-Ent-Release)
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 10:27:35 2025 +0100
+
+    Llegan los Ents a Java
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ cat prueba_git/Hola.java
+class Hola {
+    public static void main(String[] args) {
+        System.out.println("I have no more branches to commit, said the Ent");
+    }
+}
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git merge Prueba
+Already up to date.
+```
