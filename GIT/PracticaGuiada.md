@@ -99,3 +99,68 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 **Informacion(gti show / git log)
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -a -m "Nueva versión"
+[main d18a407] Changes
+ 1 file changed, 17 insertions(+)
+```
+**Git show**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git show
+commit d18a40773fc4f207f40f20d049750a7d0f179636 (HEAD -> main)
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 09:51:11 2025 +0100
+
+    Changes
+
+diff --git a/GIT/PracticaGuiada.md b/GIT/PracticaGuiada.md
+index 4d8fd10..5b11e9d 100644
+--- a/GIT/PracticaGuiada.md
++++ b/GIT/PracticaGuiada.md
+@@ -81,4 +81,21 @@ Changes not staged for commit:
+
+ no changes added to commit (use "git add" and/or "git commit -a")
++Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
++$ git add .
+
++Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
++$ git commit -m "Ampliada la explicacion del texto"
++[main 0f42e26] Ampliada la explicacion del texto
++ 1 file changed, 1 insertion(+)
++
++Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
++$ git status
++On branch main
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits)
++
++nothing to commit, working tree clean
++```
++**Informacion(gti show / git log)
+```
+**git log**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log
+commit d18a40773fc4f207f40f20d049750a7d0f179636 (HEAD -> main)
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 09:51:11 2025 +0100
+
+    Changes
+
+commit 0f42e26c26f350893265b1c1b2ce5282350e1bbb
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 09:49:24 2025 +0100
+
+    Ampliada la explicacion del texto
+
+commit 108ad56fe5ba602516c6a66b219eb78b23c4c3d8 (origin/main, origin/HEAD)
+commit d18a40773fc4f207f40f20d049750a7d0f179636 (HEAD -> main)
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 09:51:11 2025 +0100
+
+    Changes
+(Faltan)
+```
