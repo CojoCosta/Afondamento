@@ -331,3 +331,33 @@ Prueba a cambiar el Hola.java de añadiéndole la línea:
 ```
 System.out.println("I have no more branches to commit, said the Ent");
 ```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -a -m "Llegan los Ents a Java"
+[Pureba d120297] Llegan los Ents a Java
+ 2 files changed, 36 insertions(+), 4 deletions(-)
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git tag v0.7-Ent-Release
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log
+commit d12029769bf6c77993dfad3d2d1c58eaa1a34fe2 (HEAD -> Pureba, tag: v0.7-Ent-Release)
+Author: CojoCosta <dcosta1882000@gmail.com>
+Date:   Wed Oct 29 10:27:35 2025 +0100
+
+    Llegan los Ents a Java
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ cat prueba_git/Hola.java
+class Hola {
+    public static void main(String[] args) {
+        System.out.println("I have no more branches to commit, said the Ent");
+    }
+}
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git merge Prueba
+Already up to date.
+```
