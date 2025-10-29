@@ -277,3 +277,25 @@ Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
 $ git branch
 * Pureba
   main
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+d8a1687 (HEAD -> Pureba) changes
+4943c69 (tag: v0.7, origin/main, origin/HEAD, main) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
