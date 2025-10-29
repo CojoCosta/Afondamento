@@ -81,4 +81,21 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git add .
 
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -m "Ampliada la explicacion del texto"
+[main 0f42e26] Ampliada la explicacion del texto
+ 1 file changed, 1 insertion(+)
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+**Informacion(gti show / git log)
