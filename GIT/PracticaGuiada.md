@@ -67,4 +67,18 @@ $ git status
 
 *Se puede hacer un "$ git commit -F mensaje.txt" si fuera muy largo el mensaje
 ```
+**Modificacion de archivos**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   text.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
 
