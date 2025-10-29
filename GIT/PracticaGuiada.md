@@ -202,3 +202,78 @@ index d9126ab..ac21508 100644
 ```
 
 **Ignorar archivos (.gitignore)**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git ls-tree --name-only -r HEAD
+.gitignore
+Hola.java
+script.sh
+text.txt
+```
+
+**Tags y gestión de versiones (git tag y git checkout)**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git tag v0.7
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+4943c69 (HEAD -> main, tag: v0.7, origin/main, origin/HEAD) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+**Ramas**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch Prueba
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+4943c69 (HEAD -> main, tag: v0.7, origin/main, origin/HEAD, Prueba) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch
+  Prueba
+* main
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git switch Pureba
+M       GIT/PracticaGuiada.md
+Switched to branch 'Pureba'
+PS C:\Users\Diego Costa\Desktop\Afondamento> 
+```
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git branch
+* Pureba
+  main
