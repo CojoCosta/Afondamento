@@ -65,5 +65,6 @@ r (root-commit) 972303a] Confirmación inicial
 Diego Costa@DESKTOP-LM520H3 MINGW64 ~/prueba_git (master)
 $ git status
 
+*Se puede hacer un "$ git commit -F mensaje.txt" si fuera muy largo el mensaje
 ```
 
