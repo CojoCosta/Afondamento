@@ -164,3 +164,22 @@ Date:   Wed Oct 29 09:51:11 2025 +0100
     Changes
 (Faltan)
 ```
+
+**Diferencias (git diff)**
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git diff
+diff --git a/prueba_git/text.txt b/prueba_git/text.txt
+index d92e49a..d9126ab 100644
+--- a/prueba_git/text.txt
++++ b/prueba_git/text.txt
+@@ -1,5 +1,6 @@
+ uno
+ dos
+-tres
++
+ cuatro
+-cinco
+\ No newline at end of file
+```
+
