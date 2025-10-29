@@ -269,7 +269,7 @@ $ git branch
 Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
 $ git switch Pureba
 M       GIT/PracticaGuiada.md
-Switched to branch 'Pureba'
+Switched to branch 'Prueba'
 PS C:\Users\Diego Costa\Desktop\Afondamento> 
 ```
 ```
@@ -281,7 +281,7 @@ $ git branch
 ```
 Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
 $ git log --oneline
-d8a1687 (HEAD -> Pureba) changes
+d8a1687 (HEAD -> Prueba) changes
 4943c69 (tag: v0.7, origin/main, origin/HEAD, main) changes
 09ab02e changes
 db47bcf Changes
@@ -298,4 +298,36 @@ f272734 changes
 510bff1 changes
 0ac30e3 changes
 eb7023a first commit
+```
+
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git commit -a -m "Rama para prebas de codigo"
+[Pureba d3181e1] Rama para prebas de codigo
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git log --oneline
+d3181e1 (HEAD -> Prueba) Rama para prebas de codigo
+d8a1687 changes
+4943c69 (tag: v0.7, origin/main, origin/HEAD, main) changes
+09ab02e changes
+db47bcf Changes
+216e77d Changes
+d18a407 Changes
+0f42e26 Ampliada la explicacion del texto
+108ad56 Changes
+934ad24 Changes
+0f2fc93 Changes
+f272734 changes
+230aab0 changes
+1be98fa changes
+8924954 changes
+510bff1 changes
+0ac30e3 changes
+eb7023a first commit
+```
+Prueba a cambiar el Hola.java de añadiéndole la línea:
+```
+System.out.println("I have no more branches to commit, said the Ent");
 ```
