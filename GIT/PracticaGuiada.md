@@ -183,3 +183,22 @@ index d92e49a..d9126ab 100644
 \ No newline at end of file
 ```
 
+```
+Diego Costa@DESKTOP-LM520H3 MINGW64 ~/Desktop/Afondamento/prueba_git (main)
+$ git diff
+diff --git a/prueba_git/text.txt b/prueba_git/text.txt
+index d9126ab..ac21508 100644
+--- a/prueba_git/text.txt
++++ b/prueba_git/text.txt
+@@ -3,4 +3,5 @@ dos
+
+ cuatro
+ cinco
+-seis
+\ No newline at end of file
++seis
++siete
+\ No newline at end of file
+```
+
+**Ignorar archivos (.gitignore)**
