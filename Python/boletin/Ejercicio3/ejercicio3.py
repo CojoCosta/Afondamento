@@ -35,9 +35,16 @@ def pide_libro():
 # PROGRAMA PRINCIPAL
 libros = []
 try:
-    archivo_lectura = open ("C:\Users\Diego Costa\Desktop\Afondamento\Python\boletin\Ejercicio3\ejercicio3.txt", "r"):
+    archivo_lectura = open ("Python\\boletin\\Ejercicio3\\ejercicio3.txt", "r")
     linea = archivo_lectura.readline()
-    
+    while linea:
+        datos = linea.split(",")
+        while datos:
+            libros.append(datos)
+    archivo_lectura.close()
+except FileNotFoundError:
+
+    print ("Archivo no existente")
 opcion = 0
 while opcion != 4:
     print ("1.- Añadir libro.", end="\n")
@@ -61,4 +68,8 @@ while opcion != 4:
         print ("Gracias por usar el programa ")
     else :
         print ("Elige una opción correcta\n")
+
+with open ("Python\\boletin\\Ejercicio3\\ejercicio3.txt", "w") as archivo_escritura:
+    for libro in libros:
+        archivo_escritura.write(f"{libro[0]}, {libro[1]}, {libro[2]}, {libro[3]}")
 
