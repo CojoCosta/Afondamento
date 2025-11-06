@@ -3,9 +3,9 @@ def pide_entero_positivo():
         numero = int (input("Escribe un numero entero positivo: "))
         while(numero < 0):
             numero = int (input("Escribe un numero entero positivo: "))
+        return numero
     except ValueError :
         print ("Escribe un numero")
-    return numero
 
 
 def comprueba_isbn(isbn):
@@ -35,13 +35,11 @@ def pide_libro():
 # PROGRAMA PRINCIPAL
 libros = []
 try:
-    archivo_lectura = open ("Python\\boletin\\Ejercicio3\\ejercicio3.txt", "r")
-    linea = archivo_lectura.readline()
-    while linea:
-        datos = linea.split(",")
-        while datos:
-            libros.append(datos)
-    archivo_lectura.close()
+    with open ("Python\\boletin\\Ejercicio3\\ejercicio3.txt", "r") as archivo_lectura:
+        for linea in archivo_lectura:
+            datos = linea.split(",")
+            libro = (datos[0].strip(), datos[1].strip(), datos[2].strip(), datos[3].strip())
+            libros.append(libro)
 except FileNotFoundError:
 
     print ("Archivo no existente")
@@ -71,5 +69,5 @@ while opcion != 4:
 
 with open ("Python\\boletin\\Ejercicio3\\ejercicio3.txt", "w") as archivo_escritura:
     for libro in libros:
-        archivo_escritura.write(f"{libro[0]}, {libro[1]}, {libro[2]}, {libro[3]}")
+        archivo_escritura.write(f"{libro[0]}, {libro[1]}, {libro[2]}, {libro[3]}\n")
 
