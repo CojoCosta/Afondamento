@@ -34,6 +34,10 @@ def pide_libro():
 
 # PROGRAMA PRINCIPAL
 libros = []
+try:
+    archivo_lectura = open ("C:\Users\Diego Costa\Desktop\Afondamento\Python\boletin\Ejercicio3\ejercicio3.txt", "r"):
+    linea = archivo_lectura.readline()
+    
 opcion = 0
 while opcion != 4:
     print ("1.- Añadir libro.", end="\n")
