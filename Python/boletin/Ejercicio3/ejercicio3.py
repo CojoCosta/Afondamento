@@ -1,38 +1,60 @@
 def pide_entero_positivo():
     try:
-        numero = int (input("Escribe un numero entero positivo"))
+        numero = int (input("Escribe un numero entero positivo: "))
         while(numero < 0):
-            numero = int (input("Escribe un numero entero positivo"))
+            numero = int (input("Escribe un numero entero positivo: "))
     except ValueError :
         print ("Escribe un numero")
     return numero
 
 
 def comprueba_isbn(isbn):
-    dato_sin_espacios = isbn.strip().replace(" ","").replace("-","")
-    if len(dato_sin_espacios) != 10 or not dato_sin_espacios[0:9].isdigit():
+    isbn = isbn.strip().replace(" ","").replace("-","")
+    if len(isbn) != 10 or not isbn[0:9].isdigit():
             return False
-    if (dato_sin_espacios[-1] or dato_sin_espacios.endswith("X")):
+    if (isbn[-1] or isbn.endswith("X")):
         return True
     return False
 
 def pide_libro():
-    
+    titulo = ""
+    autor = ""
+    while titulo == "":
+        titulo = input("Cual es el titulo del libro¿?\n").strip()
+    while autor == "":
+        autor = input("Cual es el autor del libro¿?\n").strip()
+    isbn = input("Cual es su ISBN¿?\n")
+    while comprueba_isbn(isbn) == False:
+        isbn = input("Cual es su ISBN¿?\n")
+        comprueba_isbn(isbn)
+    print ("Nº de paginas¿?")
+    numero_paginas = pide_entero_positivo()
+    return titulo, autor, isbn, numero_paginas
+
 
 # PROGRAMA PRINCIPAL
-isbn = "123456789X" 
-isbn2 = "1234567890"
-isbn3 = "1234X6789X"
-isbn4 = "1234567890546"
-isbn5 = "12-23 23451X"
+libros = []
+opcion = 0
+while opcion != 4:
+    print ("1.- Añadir libro.", end="\n")
+    print ("2.- Mostrar lista.", end="\n")
+    print ("3.- Eliminar libros.", end="\n")
+    print ("4.- Salir.", end="\n")
+    print ("Elige una opcion: ")
+    opcion = pide_entero_positivo()
+    if opcion == 1:
+        libros.append(pide_libro())
+    elif opcion == 2:
+        print(f"{"Título":<20} {"Autor":<20} {"ISBN":<20} {"Nº Páginas":<20}")
+        for libro in libros:
+            print(f"{libro[0]:<20} {libro[1]:<20} {libro[2]:<20} {libro[3]:<20}")
+    elif opcion == 3:
+        titulo = input("Que libro vas a eliminar¿? \n")
+        for libro in libros:
+            if libro[0] == titulo:
+                libros.remove(libro)
+    elif opcion == 4:
+        print ("Gracias por usar el programa ")
+    else :
+        print ("Elige una opción correcta\n")
 
-print ("1º",end="\n")
-print (comprueba_isbn(isbn),end="\n")
-print ("2º",end="\n")
-print (comprueba_isbn(isbn2),end="\n")
-print ("3º",end="\n")
-print (comprueba_isbn(isbn3),end="\n")
-print ("4º",end="\n")
-print (comprueba_isbn(isbn4),end="\n")
-print ("5º",end="\n")
-print (comprueba_isbn(isbn5),end="\n")
