@@ -1,6 +1,5 @@
 
 import string
-import sys
 
 
 def contarPalabras(texto):
