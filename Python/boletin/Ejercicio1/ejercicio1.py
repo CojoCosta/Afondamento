@@ -59,8 +59,8 @@ def listas():
             lista2.append(randint(1,20))
             lista3.append(lista[i-1]+ lista2[i-1])
         print(f"Lista 1: {lista}", end="\n") 
-        print(f"Lista 2: {lista}", end="\n") 
-        print(f"Lista 3: {lista}", end="\n") 
+        print(f"Lista 2: {lista2}", end="\n") 
+        print(f"Lista 3: {lista3}", end="\n") 
     except ValueError:
         print("Introduce un numero", end="\n")
     
