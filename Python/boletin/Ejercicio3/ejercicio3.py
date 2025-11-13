@@ -12,7 +12,7 @@ def comprueba_isbn(isbn):
     isbn = isbn.strip().replace(" ","").replace("-","")
     if len(isbn) != 10 or not isbn[0:9].isdigit():
         return False
-    if (isbn[-1] or isbn.endswith("X")):
+    if (isbn[-1].isdigit() or isbn.endswith("X")):
         return True
     return False
 
@@ -58,10 +58,14 @@ while opcion != 4:
         for libro in libros:
             print(f"{libro[0]:<20} {libro[1]:<20} {libro[2]:<20} {libro[3]:<20}")
     elif opcion == 3:
-        titulo = input("Que libro vas a eliminar¿? \n")
-        for libro in libros:
-            if libro[0] == titulo:
-                libros.remove(libro)
+        titulo_eliminar = input("Que libro vas a eliminar¿? \n")
+        for i in range(len(libros) - 1, -1, -1):
+            #len(libros) -> donde empieza el bucle for(incluido, por eso se le resta 1)
+            # segundo  "-1", es donde acaba el bucle y no esta incluido (si pusieramos 0 no llegaria a leer la primer posicion de la coleccion)
+            # tercer "-1" es como el i-- en un fori
+            if libros[i][0] == titulo_eliminar:
+                libros.remove(libros[i])
+    
     elif opcion == 4:
         print ("Gracias por usar el programa ")
     else :
