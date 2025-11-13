@@ -72,7 +72,6 @@ def menu():
         print ("4.- Listas.", end= "\n")
         print ("5.- Salir.", end= "\n")
         opcion = int(input("Elije una opcion: "))
-    
         if opcion == 1:
             division()
         if opcion == 2:

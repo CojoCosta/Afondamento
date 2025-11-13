@@ -1,6 +1,6 @@
 def pide_entero_positivo():
     try:
-        numero = -1;-*
+        numero = -1;
         while(numero < 0):
             numero = int (input("Escribe un numero entero positivo: "))
         return numero
