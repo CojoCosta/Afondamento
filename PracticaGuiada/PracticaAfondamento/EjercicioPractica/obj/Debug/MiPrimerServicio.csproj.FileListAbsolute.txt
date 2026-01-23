@@ -1,0 +1,9 @@
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Debug\EjercicioPractica.exe.config
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Debug\EjercicioPractica.exe
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Debug\EjercicioPractica.pdb
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.AssemblyReference.cache
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.MiPrimerServicio.resources
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.GenerateResource.cache
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.CoreCompileInputs.cache
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.exe
+C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.pdb
