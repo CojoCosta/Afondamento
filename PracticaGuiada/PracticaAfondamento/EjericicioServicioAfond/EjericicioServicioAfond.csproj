@@ -44,14 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.cs">
+    <Compile Include="ServiceEjercicio.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service1.Designer.cs">
-      <DependentUpon>Service1.cs</DependentUpon>
+    <Compile Include="ServiceEjercicio.Designer.cs">
+      <DependentUpon>ServiceEjercicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServidorEj1Servicios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,6 +1,6 @@
 ﻿namespace EjericicioServicioAfond
 {
-    partial class Service1
+    partial class ServiceEjercicio
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

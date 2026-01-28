@@ -1,0 +1,7 @@
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe.config
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.pdb
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Debug\EjericicioServicioAfond.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Debug\EjericicioServicioAfond.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Debug\EjericicioServicioAfond.exe
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Debug\EjericicioServicioAfond.pdb
