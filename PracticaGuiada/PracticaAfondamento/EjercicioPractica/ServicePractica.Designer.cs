@@ -1,4 +1,4 @@
-﻿namespace EjercicioPractica
+﻿namespace MiPrimerServicio
 {
     partial class MiPrimerServicio
     {

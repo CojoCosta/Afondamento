@@ -1,0 +1,10 @@
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Release\EjercicioPractica.exe.config
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Release\EjercicioPractica.exe
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\bin\Release\EjercicioPractica.pdb
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\MiPrimerServicio.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\MiPrimerServicio.csproj.GenerateResource.cache
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\MiPrimerServicio.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\EjercicioPractica.exe
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\EjercicioPractica.pdb
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\MiPrimerServicio.MiPrimerServicio.resources
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Release\EjercicioPractica.exe.config
