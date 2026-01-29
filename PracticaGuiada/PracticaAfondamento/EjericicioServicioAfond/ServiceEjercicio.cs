@@ -22,16 +22,25 @@ namespace EjericicioServicioAfond
         protected override void OnStart(string[] args)
         {
             Thread lanzarServidor = new Thread(() => { servidor.InitServer(); } );
+            
         }
 
         protected override void OnStop()
         {
+
         }
         protected override void OnPause()
         {
+
         }
         protected override void OnContinue()
         {
+
+        }
+        public void WriteEvent(string mensaje)
+        {
+            EventLog.Clear();
+            EventLog.WriteEntry(mensaje);
         }
     }
 }

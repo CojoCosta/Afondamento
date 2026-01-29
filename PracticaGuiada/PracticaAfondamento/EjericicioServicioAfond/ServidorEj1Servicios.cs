@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -8,15 +10,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-using System.Data;
-
 namespace EjericicioServicioAfond
 {
     internal class ServidorEj1Servicios
     {
         public bool ServerRunning { set; get; } = true;
         Socket s;
-
+        ServiceEjercicio service = new ServiceEjercicio();
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -38,7 +38,7 @@ namespace EjericicioServicioAfond
                 }
                 catch (SocketException e)
                 {
-                    Console.WriteLine("Servidor cerrado \nPuerto en uso");
+                    service.WriteEvent("[ERROR]Puerto en uso, servidor cerrado");
                     s.Close();
                 }
             }
@@ -56,16 +56,13 @@ namespace EjericicioServicioAfond
                 using (StreamWriter sw = new StreamWriter(ns))
                 {
                     sw.AutoFlush = true;
-                    //string pass = Password("password");
                     string msg = "";
-                    //string comando;
                     DateTime fechaYHora;
                     try
                     {
                         msg = sr.ReadLine();
                         if (msg != null)
                         {
-                            //comando = msg.Split(" ")[0];
                             switch (msg.Trim())
                             {
                                 case "time":
@@ -80,27 +77,9 @@ namespace EjericicioServicioAfond
                                     fechaYHora = DateTime.Now;
                                     sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy -- HH:mm:ss"));
                                     break;
-                                //case "close":
-                                //    if (msg == $"close {pass}")
-                                //    {
-                                //        ServerRunning = false;
-                                //        s.Close();
-                                //    }
-                                //    else
-                                //    {
-                                //        if (msg.Trim() == "close")
-                                //        {
-                                //            sw.WriteLine("No ha escrito ninguna contraseña");
-                                //        }
-                                //        else
-                                //        {
-                                //            sw.WriteLine("Contraseña incorrecta");
-                                //        }
-                                //    }
-                                //    break;
 
                                 default:
-                                    Console.WriteLine($"Error de comando: {msg}");
+                                    service.WriteEvent($"[ERROR] Comando no válido: {msg}");
                                     break;
                             }
                             Console.WriteLine($"El cliente escribió: {msg}");
@@ -158,7 +137,7 @@ namespace EjericicioServicioAfond
             }
             catch (Exception ex) when (ex is FileNotFoundException || ex is IOException || ex is UnauthorizedAccessException)
             {
-                Console.WriteLine("Error de archivo");
+                service.WriteEvent("[ERROR] Leer archivo inexistente o puerto no válido\nPuerto por defecto: 31416");
                 return 31416;
             }
         }
