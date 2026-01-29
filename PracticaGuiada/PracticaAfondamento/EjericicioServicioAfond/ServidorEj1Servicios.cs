@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace EjericicioServicioAfond
         public bool ServerRunning { set; get; } = true;
         Socket s;
         ServiceEjercicio service = new ServiceEjercicio();
+        //CONSTANTES
+        int defaultPort = 31416;
+        string comandoNoValido = "Comando no válido: ";
+        string errorPuerto = "Leer archivo inexistente o puerto no válido\nPuerto por defecto: ";
+        string puertoOcupado = "Puerto en uso, servidor cerrado";
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -38,7 +44,8 @@ namespace EjericicioServicioAfond
                 }
                 catch (SocketException e)
                 {
-                    service.WriteEvent("[ERROR]Puerto en uso, servidor cerrado");
+                    service.WriteEvent($"{puertoOcupado}");
+                    escribirErrores($"{puertoOcupado}");
                     s.Close();
                 }
             }
@@ -77,9 +84,9 @@ namespace EjericicioServicioAfond
                                     fechaYHora = DateTime.Now;
                                     sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy -- HH:mm:ss"));
                                     break;
-
                                 default:
-                                    service.WriteEvent($"[ERROR] Comando no válido: {msg}");
+                                    service.WriteEvent($"{comandoNoValido}{msg}");
+                                    escribirErrores($"{comandoNoValido}{msg}");
                                     break;
                             }
                             Console.WriteLine($"El cliente escribió: {msg}");
@@ -94,41 +101,14 @@ namespace EjericicioServicioAfond
             }
         }
 
-        //public int puertoEnUso(int[] puertos)
-        //{
-        //    int j = 0;
-        //    bool flag = true;
-        //    while (flag && j < puertos.Length)
-        //    {
-        //        using (Socket socketComprobacion = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
-        //        {
-        //            try
-        //            {
-        //                IPEndPoint comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
-        //                socketComprobacion.Bind(comprobacion);
-        //                socketComprobacion.Listen();
-        //                flag = false;
-        //                return puertos[j];
-        //            }
-        //            catch (SocketException ex) when (ex.ErrorCode == (int)SocketError.AddressAlreadyInUse)
-        //            {
-        //                Console.WriteLine("Sin puerto libre");
-        //                j++;
-        //            }
-        //        }
-        //    }
-        //    j--;
-        //    return puertos[j];
-        //}
-
         string programdata = Environment.GetEnvironmentVariable("Programdata");
         int puertoEscucha = 0;
         public int PuertoEnEscucha(string fileName)
         {
             try
             {
-                string path = $"{Environment.GetEnvironmentVariable("programdata")}\\{fileName}.txt";
                 DirectoryInfo dir = new DirectoryInfo(programdata);
+                string path = $"{programdata}\\{fileName}.txt";
                 using (StreamReader sr = new StreamReader(path))
                 {
                     puertoEscucha = int.Parse(sr.ReadToEnd());
@@ -137,9 +117,29 @@ namespace EjericicioServicioAfond
             }
             catch (Exception ex) when (ex is FileNotFoundException || ex is IOException || ex is UnauthorizedAccessException)
             {
-                service.WriteEvent("[ERROR] Leer archivo inexistente o puerto no válido\nPuerto por defecto: 31416");
-                return 31416;
+                service.WriteEvent($"{errorPuerto}{defaultPort}");
+                escribirErrores($"{errorPuerto}{defaultPort}");
+                return defaultPort;
             }
         }
+
+        public void escribirErrores(string mensaje)
+        {
+            try
+            {
+                DateTime timeStamp = DateTime.Now;
+                DirectoryInfo dir = new DirectoryInfo(programdata);
+                string path = $"{programdata}\\errores.txt";
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.WriteLine($"[ERROR] {mensaje} - {timeStamp.ToString("dd/MM/yyyy -- HH:mm:ss")}");
+                }
+            }
+            catch (Exception e)
+            {
+                service.WriteEvent("Archivo inexistente o erróneo");
+            }
+        }
+       
     }
 }

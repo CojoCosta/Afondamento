@@ -16,30 +16,20 @@ namespace EjericicioServicioAfond
         public ServiceEjercicio()
         {
             InitializeComponent();
+            this.AutoLog = false;
         }
         ServidorEj1Servicios servidor = new ServidorEj1Servicios();
-
         protected override void OnStart(string[] args)
         {
             Thread lanzarServidor = new Thread(() => { servidor.InitServer(); } );
-            
         }
 
         protected override void OnStop()
         {
-
-        }
-        protected override void OnPause()
-        {
-
-        }
-        protected override void OnContinue()
-        {
-
+            WriteEvent("Deteniendo el servidor");
         }
         public void WriteEvent(string mensaje)
         {
-            EventLog.Clear();
             EventLog.WriteEntry(mensaje);
         }
     }
