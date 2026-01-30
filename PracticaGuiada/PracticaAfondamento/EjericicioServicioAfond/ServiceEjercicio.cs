@@ -25,7 +25,6 @@ namespace EjericicioServicioAfond
             servidor = new ServidorEj1Servicios();
             Thread lanzarServidor = new Thread(servidor.InitServer);
             lanzarServidor.Start();
-
         }
 
         protected override void OnStop()
@@ -39,4 +38,5 @@ namespace EjericicioServicioAfond
         }
     }
     //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand
+    //TODO hacer este comando -> sc description MiPrimerServicio "Servicio de prueba"
 }
