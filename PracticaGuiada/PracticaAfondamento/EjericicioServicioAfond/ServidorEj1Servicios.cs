@@ -122,7 +122,7 @@ namespace EjericicioServicioAfond
             {
                 service.WriteEvent($"{errorPuerto}{defaultPort}");
                 escribirErrores($"{errorPuerto}{defaultPort}");
-                return defaultPort;
+                return -156;
             }
         }
 

@@ -31,6 +31,7 @@
             // 
             // ServiceEjercicio
             // 
+            this.AutoLog = false;
             this.ServiceName = "ServiceEjercicio";
 
         }
