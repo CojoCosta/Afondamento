@@ -62,6 +62,7 @@ namespace EjericicioServicioAfond
                 using (StreamReader sr = new StreamReader(ns))
                 using (StreamWriter sw = new StreamWriter(ns))
                 {
+                    sw.WriteLine("Bienvido");
                     sw.AutoFlush = true;
                     string msg = "";
                     DateTime fechaYHora;
@@ -90,6 +91,7 @@ namespace EjericicioServicioAfond
                                     break;
                             }
                             Console.WriteLine($"El cliente escribió: {msg}");
+                            escribirComandos(msg, ieCliente.Address, ieCliente.Port);
                         }
                     }
                     catch (Exception ex) when (ex is IOException || ex is SocketException)
@@ -140,6 +142,22 @@ namespace EjericicioServicioAfond
                 service.WriteEvent("Archivo inexistente o erróneo");
             }
         }
-       
+        public void escribirComandos(string mensaje, IPAddress ip, int puerto)
+        {
+            try
+            {
+                DateTime timeStamp = DateTime.Now;
+                DirectoryInfo dir = new DirectoryInfo(programdata);
+                string path = $"{programdata}\\errores.txt";
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.WriteLine($"[{timeStamp.ToString("dd/MM/yyyy - HH:mm:ss")}@{ip}{puerto}] : {mensaje}");
+                }
+            }
+            catch (Exception e)
+            {
+                service.WriteEvent("Archivo inexistente o erróneo");
+            }
+        }
     }
 }

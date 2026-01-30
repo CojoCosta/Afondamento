@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace EjericicioServicioAfond
 {
@@ -18,14 +19,21 @@ namespace EjericicioServicioAfond
             InitializeComponent();
             this.AutoLog = false;
         }
-        ServidorEj1Servicios servidor = new ServidorEj1Servicios();
+        public bool ServerRunning { set; get; } = true;
         protected override void OnStart(string[] args)
         {
-            Thread lanzarServidor = new Thread(() => { servidor.InitServer(); } );
+            while (ServerRunning)
+            {
+                ServidorEj1Servicios servidor = new ServidorEj1Servicios();
+                Thread lanzarServidor = new Thread(servidor.InitServer);
+                lanzarServidor.IsBackground = true;
+                lanzarServidor.Start();
+            }
         }
 
         protected override void OnStop()
         {
+            ServerRunning = false;
             WriteEvent("Deteniendo el servidor");
         }
         public void WriteEvent(string mensaje)
@@ -33,4 +41,5 @@ namespace EjericicioServicioAfond
             EventLog.WriteEntry(mensaje);
         }
     }
+    //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand
 }
