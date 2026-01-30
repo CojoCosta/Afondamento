@@ -8,7 +8,6 @@ C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\
 C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.exe
 C:\Users\alumnoinfo\source\repos\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.pdb
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.AssemblyReference.cache
-C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.exe.config
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.GenerateResource.cache
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\MiPrimerServicio.csproj.CoreCompileInputs.cache
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjercicioPractica\obj\Debug\EjercicioPractica.exe

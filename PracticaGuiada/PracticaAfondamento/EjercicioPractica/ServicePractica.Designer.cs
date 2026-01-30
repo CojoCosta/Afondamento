@@ -31,7 +31,6 @@
             // 
             // MiPrimerServicio
             // 
-            this.CanPauseAndContinue = true;
             this.ServiceName = "MiPrimerServicio";
 
         }
