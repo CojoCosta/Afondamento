@@ -19,21 +19,18 @@ namespace EjericicioServicioAfond
             InitializeComponent();
             this.AutoLog = false;
         }
-        public bool ServerRunning { set; get; } = true;
+        ServidorEj1Servicios servidor;
         protected override void OnStart(string[] args)
         {
-            while (ServerRunning)
-            {
-                ServidorEj1Servicios servidor = new ServidorEj1Servicios();
-                Thread lanzarServidor = new Thread(servidor.InitServer);
-                lanzarServidor.IsBackground = true;
-                lanzarServidor.Start();
-            }
+            servidor = new ServidorEj1Servicios();
+            Thread lanzarServidor = new Thread(servidor.InitServer);
+            lanzarServidor.Start();
+
         }
 
         protected override void OnStop()
         {
-            ServerRunning = false;
+            servidor.ServerRunning = false;
             WriteEvent("Deteniendo el servidor");
         }
         public void WriteEvent(string mensaje)

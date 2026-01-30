@@ -46,6 +46,7 @@ namespace EjericicioServicioAfond
                 {
                     service.WriteEvent($"{puertoOcupado}");
                     escribirErrores($"{puertoOcupado}");
+
                     s.Close();
                 }
             }
@@ -62,7 +63,7 @@ namespace EjericicioServicioAfond
                 using (StreamReader sr = new StreamReader(ns))
                 using (StreamWriter sw = new StreamWriter(ns))
                 {
-                    sw.WriteLine("Bienvido");
+                    sw.WriteLine("Bienvenido");
                     sw.AutoFlush = true;
                     string msg = "";
                     DateTime fechaYHora;
@@ -132,7 +133,7 @@ namespace EjericicioServicioAfond
                 DateTime timeStamp = DateTime.Now;
                 DirectoryInfo dir = new DirectoryInfo(programdata);
                 string path = $"{programdata}\\errores.txt";
-                using (StreamWriter sw = new StreamWriter(path))
+                using (StreamWriter sw = new StreamWriter(path, true))
                 {
                     sw.WriteLine($"[ERROR] {mensaje} - {timeStamp.ToString("dd/MM/yyyy -- HH:mm:ss")}");
                 }
@@ -148,8 +149,8 @@ namespace EjericicioServicioAfond
             {
                 DateTime timeStamp = DateTime.Now;
                 DirectoryInfo dir = new DirectoryInfo(programdata);
-                string path = $"{programdata}\\errores.txt";
-                using (StreamWriter sw = new StreamWriter(path))
+                string path = $"{programdata}\\comandos.txt";
+                using (StreamWriter sw = new StreamWriter(path, true))
                 {
                     sw.WriteLine($"[{timeStamp.ToString("dd/MM/yyyy - HH:mm:ss")}@{ip}{puerto}] : {mensaje}");
                 }
