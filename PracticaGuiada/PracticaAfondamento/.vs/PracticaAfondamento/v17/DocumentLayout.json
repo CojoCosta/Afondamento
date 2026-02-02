@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\",
+  "WorkspaceRootPath": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B09BB761-FCF4-487F-970C-F0937423C90B}|EjercicioPractica\\MiPrimerServicio.csproj|c:\\users\\alumnoinfo\\source\\repos\\afondamento\\practicaguiada\\practicaafondamento\\ejerciciopractica\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B09BB761-FCF4-487F-970C-F0937423C90B}|EjercicioPractica\\MiPrimerServicio.csproj|solutionrelative:ejerciciopractica\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|c:\\users\\diego costa\\desktop\\afondamento\\practicaguiada\\practicaafondamento\\ejericicioservicioafond\\serviceejercicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|solutionrelative:ejericicioservicioafond\\serviceejercicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B09BB761-FCF4-487F-970C-F0937423C90B}|EjercicioPractica\\EjercicioPractica.csproj|C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\ejerciciopractica\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B09BB761-FCF4-487F-970C-F0937423C90B}|EjercicioPractica\\EjercicioPractica.csproj|solutionrelative:ejerciciopractica\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\ejericicioservicioafond\\serviceejercicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|solutionrelative:ejericicioservicioafond\\serviceejercicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\ejericicioservicioafond\\servidorej1servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CA77B54-19CA-4645-8BDD-5740BF62D519}|EjericicioServicioAfond\\EjericicioServicioAfond.csproj|solutionrelative:ejericicioservicioafond\\servidorej1servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +22,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Service1.cs",
-              "DocumentMoniker": "C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjercicioPractica\\Service1.cs",
-              "RelativeDocumentMoniker": "EjercicioPractica\\Service1.cs",
-              "ToolTip": "C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjercicioPractica\\Service1.cs",
-              "RelativeToolTip": "EjercicioPractica\\Service1.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAywE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:32:19.604Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Service1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjercicioPractica\\Service1.cs",
-              "RelativeDocumentMoniker": "EjercicioPractica\\Service1.cs",
-              "ToolTip": "C:\\Users\\alumnoinfo\\source\\repos\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjercicioPractica\\Service1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "EjercicioPractica\\Service1.cs [Dise\u00F1o]",
+              "Title": "ServiceEjercicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "RelativeDocumentMoniker": "EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "ToolTip": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServiceEjercicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EjericicioServicioAfond\\ServiceEjercicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:31:31.859Z"
+              "WhenOpened": "2026-01-30T09:12:53.918Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServidorEj1Servicios.cs",
+              "DocumentMoniker": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServidorEj1Servicios.cs",
+              "RelativeDocumentMoniker": "EjericicioServicioAfond\\ServidorEj1Servicios.cs",
+              "ToolTip": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServidorEj1Servicios.cs",
+              "RelativeToolTip": "EjericicioServicioAfond\\ServidorEj1Servicios.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAtwDkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T08:12:28.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceEjercicio.cs",
+              "DocumentMoniker": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "RelativeDocumentMoniker": "EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "ToolTip": "C:\\Users\\Diego Costa\\Desktop\\Afondamento\\PracticaGuiada\\PracticaAfondamento\\EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "RelativeToolTip": "EjericicioServicioAfond\\ServiceEjercicio.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwD4AAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T08:10:58.327Z",
+              "EditorCaption": ""
             }
           ]
         }
