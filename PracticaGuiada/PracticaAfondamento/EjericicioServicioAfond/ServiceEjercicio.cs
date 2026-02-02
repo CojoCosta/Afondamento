@@ -21,6 +21,10 @@ namespace EjericicioServicioAfond
             this.AutoLog = false;
         }
         ServidorEj1Servicios servidor;
+        /// <summary>
+        /// Inicia el servicio lanzando un hilo con la funcion InitServer de la clase ServidorEj1Servicios
+        /// </summary>
+        /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
             servidor = new ServidorEj1Servicios();
@@ -28,11 +32,19 @@ namespace EjericicioServicioAfond
             lanzarServidor.Start();
         }
 
+        /// <summary>
+        /// Detiene el funcionamiento del servicio
+        /// </summary>
         protected override void OnStop()
         {
             servidor.ServerRunning = false;
             WriteEvent("Deteniendo el servidor");
         }
+
+        /// <summary>
+        /// Escribe en el visor de eventos el string pasado como parametro
+        /// </summary>
+        /// <param name="mensaje">string informativo que será en el visor de eventos</param>
         public void WriteEvent(string mensaje)
         {
             const string nombreServicio = "ServiceEjercicio";

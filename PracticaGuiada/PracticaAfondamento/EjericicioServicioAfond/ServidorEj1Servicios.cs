@@ -56,7 +56,7 @@ namespace EjericicioServicioAfond
         }
 
         /// <summary>
-        /// Gestiona cada cliente conectado para la ultilización del servicio
+        /// Gestiona cada cliente conectado para la ultilización del servicio para obtener datos de fecha y hora
         /// </summary>
         /// <param name="sCliente">Socket creador por la conexion de un cliente</param>
         public void ProtocoloCliente(Socket sCliente)
