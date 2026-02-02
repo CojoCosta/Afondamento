@@ -38,5 +38,5 @@ namespace EjericicioServicioAfond
         }
     }
     //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand
-    //TODO hacer este comando -> sc description MiPrimerServicio "Servicio de prueba"
+    //TODO hacer este comando -> sc description ServiceEjercicio "Proporciona datos temporales de fecha(date) y hora(time), por separado o en un solo comando(all)."
 }
