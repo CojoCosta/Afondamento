@@ -5,3 +5,5 @@ C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\Ejer
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Release\EjericicioServicioAfond.csproj.CoreCompileInputs.cache
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Release\EjericicioServicioAfond.exe
 C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Release\EjericicioServicioAfond.pdb
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Release\EjericicioServicioAfond.ServiceEjercicio.resources
+C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\obj\Release\EjericicioServicioAfond.csproj.GenerateResource.cache
