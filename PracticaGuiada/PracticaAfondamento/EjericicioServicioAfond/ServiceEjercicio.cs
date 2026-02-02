@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading;
@@ -34,7 +35,15 @@ namespace EjericicioServicioAfond
         }
         public void WriteEvent(string mensaje)
         {
-            EventLog.WriteEntry(mensaje);
+            const string nombreServicio = "EjercicioService"; //ServiceEjercicio
+            try
+            {
+                EventLog.WriteEntry(nombreServicio, mensaje);
+            }
+            catch (Exception ex) 
+            {
+                servidor.escribirComandos($"[ERROR] {nombreServicio} erróneo", IPAddress.Any ,0);
+            }
         }
     }
     //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand

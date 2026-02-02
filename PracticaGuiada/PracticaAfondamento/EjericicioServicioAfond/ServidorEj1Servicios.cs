@@ -23,6 +23,11 @@ namespace EjericicioServicioAfond
         string comandoNoValido = "Comando no válido: ";
         string errorPuerto = "Leer archivo inexistente o puerto no válido\nPuerto por defecto: ";
         string puertoOcupado = "Puerto en uso, servidor cerrado";
+        string errorArchivo = "Archivo inexistente o erróneo";
+
+        /// <summary>
+        /// Funcion inicia un servidor de escucha, lanzando un hilo por cada cliente conectado
+        /// </summary>
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -45,13 +50,15 @@ namespace EjericicioServicioAfond
                 catch (SocketException e)
                 {
                     service.WriteEvent($"{puertoOcupado}");
-                    escribirErrores($"{puertoOcupado}");
-
                     s.Close();
                 }
             }
         }
 
+        /// <summary>
+        /// Gestiona cada cliente conectado para la ultilización del servicio
+        /// </summary>
+        /// <param name="sCliente">Socket creador por la conexion de un cliente</param>
         public void ProtocoloCliente(Socket sCliente)
         {
             using (sCliente)
@@ -88,7 +95,6 @@ namespace EjericicioServicioAfond
                                     break;
                                 default:
                                     service.WriteEvent($"{comandoNoValido}{msg}");
-                                    escribirErrores($"{comandoNoValido}{msg}");
                                     break;
                             }
                             Console.WriteLine($"El cliente escribió: {msg}");
@@ -106,6 +112,12 @@ namespace EjericicioServicioAfond
 
         string programdata = Environment.GetEnvironmentVariable("Programdata");
         int puertoEscucha = 0;
+
+        /// <summary>
+        /// Lectura de un archivo en el directorio %programdata% en el cual se encuentra un puerto de escucha
+        /// </summary>
+        /// <param name="fileName">Nombre del archivo</param>
+        /// <returns>El puerto de escucha leido en el archivo o un valor por defecto (31416)</returns>
         public int PuertoEnEscucha(string fileName)
         {
             try
@@ -115,34 +127,17 @@ namespace EjericicioServicioAfond
                 using (StreamReader sr = new StreamReader(path))
                 {
                     puertoEscucha = int.Parse(sr.ReadToEnd());
+                    service.WriteEvent($"Puerto de escucha: {puertoEscucha}");
                     return puertoEscucha;
                 }
             }
             catch (Exception ex) when (ex is FileNotFoundException || ex is IOException || ex is UnauthorizedAccessException)
             {
                 service.WriteEvent($"{errorPuerto}{defaultPort}");
-                escribirErrores($"{errorPuerto}{defaultPort}");
                 return defaultPort;
             }
         }
 
-        public void escribirErrores(string mensaje)
-        {
-            try
-            {
-                DateTime timeStamp = DateTime.Now;
-                DirectoryInfo dir = new DirectoryInfo(programdata);
-                string path = $"{programdata}\\errores.txt";
-                using (StreamWriter sw = new StreamWriter(path, true))
-                {
-                    sw.WriteLine($"[ERROR] {mensaje} - {timeStamp.ToString("dd/MM/yyyy -- HH:mm:ss")}");
-                }
-            }
-            catch (Exception e)
-            {
-                service.WriteEvent("Archivo inexistente o erróneo");
-            }
-        }
         public void escribirComandos(string mensaje, IPAddress ip, int puerto)
         {
             try
@@ -157,7 +152,7 @@ namespace EjericicioServicioAfond
             }
             catch (Exception e)
             {
-                service.WriteEvent("Archivo inexistente o erróneo");
+                service.WriteEvent(errorArchivo);
             }
         }
     }
