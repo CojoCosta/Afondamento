@@ -35,17 +35,18 @@ namespace EjericicioServicioAfond
         }
         public void WriteEvent(string mensaje)
         {
-            const string nombreServicio = "EjercicioService"; //ServiceEjercicio
+            const string nombreServicio = null; //ServiceEjercicio
             try
             {
                 EventLog.WriteEntry(nombreServicio, mensaje);
             }
             catch (Exception ex) 
             {
+                EventLog.WriteEntry("FUNCIONA");
                 servidor.escribirComandos($"[ERROR] {nombreServicio} erróneo", IPAddress.Any ,0);
             }
         }
     }
     //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Debug\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand
-    //TODO hacer este comando -> sc description ServiceEjercicio "Proporciona datos temporales de fecha(date) y hora(time), por separado o en un solo comando(all)."
+    //sc description ServiceEjercicio "Proporciona datos temporales de fecha(date) y hora(time), por separado o en un solo comando(all)."
 }
