@@ -137,7 +137,12 @@ namespace EjericicioServicioAfond
                 return defaultPort;
             }
         }
-
+        /// <summary>
+        /// Escribe en un archivo cada uno de los comandos (erróneos o no) escritos por los clientes con su fecha, hora, ip y puerto correspondiente
+        /// </summary>
+        /// <param name="mensaje">comando escrito por el cliente</param>
+        /// <param name="ip">ip de cada cliente</param>
+        /// <param name="puerto">puerto por el que se conecta cada cliente</param>
         public void escribirComandos(string mensaje, IPAddress ip, int puerto)
         {
             try
