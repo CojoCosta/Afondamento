@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
-
+//EN ALUMNOINFO ME DA ERRORES AL INICIAR EL PROGRAMA, ENTRA EN MI SESION PARA CORREGIRLO
 namespace EjericicioServicioAfond
 {
     public partial class ServiceEjercicio : ServiceBase
