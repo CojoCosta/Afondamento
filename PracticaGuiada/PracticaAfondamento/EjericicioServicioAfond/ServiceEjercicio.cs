@@ -10,7 +10,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
-//EN ALUMNOINFO ME DA ERRORES AL INICIAR EL PROGRAMA, ENTRA EN MI SESION PARA CORREGIRLO
+//TODO INSTRUCCIONES DE USO:
+//ENTRA EN MI SESION (DIEGO COSTA) PARA CORREGIRLO, EN ALUMNOINFO ME DA ERRORES AL INICIAR EL PROGRAMA 
 namespace EjericicioServicioAfond
 {
     public partial class ServiceEjercicio : ServiceBase
@@ -60,5 +61,6 @@ namespace EjericicioServicioAfond
         }
     }
     //sc create "ServiceEjercicio" binPath= \""C:\Users\Diego Costa\Desktop\Afondamento\PracticaGuiada\PracticaAfondamento\EjericicioServicioAfond\bin\Release\EjericicioServicioAfond.exe\"" DisplayName="AAAEjercicioAfondamento" start=demand
+
     //sc description ServiceEjercicio "Proporciona datos temporales de fecha(date) y hora(time), por separado o en un solo comando(all)."
 }
